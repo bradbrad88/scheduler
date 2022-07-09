@@ -29,9 +29,20 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
+      <div class="input-group time-block">
+        <label class="border-top pl-5 pr-3 pt-2"></label>
+        <textarea
+          type="text"
+          class="form-control description border-bottom-0"
+          placeholder=""
+        ></textarea>
+        <div class="input-group-append">
+          <button class="btn btn-outline-dark btn-primary text-white" type="button">
+            Save
+          </button>
+        </div>
+      </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./assets/js/script.js"></script>
