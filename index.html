@@ -22,27 +22,63 @@
     <title>Work Day Scheduler</title>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
     </header>
-    <div class="container">
-      <div class="input-group time-block">
-        <label class="border-dark border-top pl-5 pr-3 pt-2"></label>
-        <textarea
-          type="text"
-          class="form-control description border-dark border-bottom-0"
-          placeholder=""
-        ></textarea>
-        <div class="input-group-append">
-          <button class="btn border-dark saveBtn" type="button">Save</button>
+    <main role="main" class="flex-shrink-0 mb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="startInput">Start of Day</label>
+              </div>
+              <select class="custom-select" id="startInput">
+                <option selected>Choose...</option>
+                <option value="0">12am</option>
+                <option value="1">1am</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <label class="input-group-text" for="endInput">End of Day</label>
+              </div>
+              <select class="custom-select" id="endInput">
+                <option selected value="">Choose...</option>
+                <option value="0">12am</option>
+                <option value="1">1am</option>
+              </select>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <div class="container timeblock-container">
+        <div class="input-group time-block">
+          <label class="border-dark border-top pl-5 pr-3 pt-2"></label>
+          <textarea
+            type="text"
+            class="form-control description border-dark border-bottom-0"
+            placeholder=""
+          ></textarea>
+          <div class="input-group-append">
+            <button class="btn border-dark border-bottom-0 saveBtn" type="button">Save</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer mt-auto">
+      <div class="container-fluid p-4 text-center">
+        <p class="">Created by Brad Teague 2022</p>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/js/hours-range.js"></script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>
